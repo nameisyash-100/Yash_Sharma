@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Sharma - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6b96ba5a8c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Matrix Canvas Background -->
+    <canvas id="matrixCanvas"></canvas>
+    
+    <!-- Header/Navigation -->
+    <header>
+        <div class="logo">
+            <span class="neon-text">YS</span>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#about" class="glitch-hover">About</a></li>
+                <li><a href="#skills" class="glitch-hover">Skills</a></li>
+                <li><a href="#projects" class="glitch-hover">Projects</a></li>
+                <li><a href="#Certifications" class="glitch-hover">Certifications</a></li>
+                <li><a href="#Experience" class="glitch-hover">Experience</a></li> 
+                <li><a href="#Testimonials" class="glitch-hover">Testimonials</a></li>
+                <!-- <li><a href="#tools" class="glitch-hover">Tools</a></li> -->
+                <li><a href="#contact" class="glitch-hover">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="typing-text"></h1>
+            <div class="bio fade-in">
+                Founder of Hackiware and final-year BCA student specializing in Cybersecurity. Passionate about Ethical Hacking, Digital Forensics, and VAPT. Delivered 30+ seminars and trained 10,000+ students in cybersecurity. Creator of initiatives like Kavach Suraksha ke 7 Din and Source Code Seminar.
+            </div>
+            <div class="cta-buttons">
+                <a href="#contact" class="neon-button">Hire / Connect</a>
+                <a href="#certifications" class="neon-button">View Certifications</a>
+                <a href="assets/Yash_Sharma_Resume.pdf" download class="neon-button download-btn">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+        <div class="profile-card">
+            <div class="avatar">
+                <!-- Replace with your image URL -->
+                <img src="assets/profile.jpg" alt="Yash Sharma">
+            </div>
+            <h2>Yash Sharma</h2>
+            <p>BCA, Cyber Security | Founder of Hackiware</p>
+            <div class="social-links">
+                <a href="www.linkedin.com/in/yash-sharma-a6ba89290" target="_blank" class="neon-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/nameisyash-100" target="_blank" class="neon-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/nameisyash100/?hl=en" target="_blank" class="neon-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section fade-in">
+        <h2 class="section-title">About Me</h2>
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="close"></span>
+                    <span class="minimize"></span>
+                    <span class="maximize"></span>
+                </div>
+                <div class="terminal-title">user@portfolio: ~/about</div>
+            </div>
+            <div class="terminal-content">
+                <div class="command-line">$ cat about_me.txt</div>
+                <div class="about-content">
+                    <p>I'm Yash Sharma, the Founder of Hackiware and a final-year BCA (Cybersecurity Specialization) student at Poornima University. My passion for cybersecurity goes beyond academics — it's about creating real impact. I focus on Ethical Hacking, Digital Forensics, VAPT (Vulnerability Assessment & Penetration Testing), and Security Awareness, turning my curiosity into action.</p>
+                    <p>Over the years, I've had the privilege of delivering 30+ seminars across schools and educational institutions, where I've trained more than 10,000 students in cybersecurity concepts and safe digital practices. Through initiatives like Kavach Suraksha ke 7 Din and Source Code Seminar, I've worked to build a more cyber-aware community and inspire the next generation of ethical hackers.</p>
+                    <p>I'm naturally curious and love staying ahead of the curve — exploring emerging technologies, developing innovative tools, and working on projects that strengthen security for individuals and organizations alike.</p>
+                    <p class="cursor"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3 class="category-title">Core Expertise</h3>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Ethical Hacking & VAPT</span>
+                        <span class="percent">92%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 92%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Digital Forensics</span>
+                        <span class="percent">88%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 88%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Cybersecurity Tools</span>
+                        <span class="percent">90%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 90%"></div></div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="category-title">Programming & Development</h3>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Python</span>
+                        <span class="percent">85%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 85%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Java</span>
+                        <span class="percent">80%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 80%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>C Programming</span>
+                        <span class="percent">75%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 75%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Web Development</span>
+                        <span class="percent">82%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 82%"></div></div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="category-title">Systems & Infrastructure</h3>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Network Fundamentals</span>
+                        <span class="percent">88%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 88%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Linux Administration</span>
+                        <span class="percent">85%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 85%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>System Administration</span>
+                        <span class="percent">83%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 83%"></div></div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="category-title">Additional Skills</h3>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Machine Learning</span>
+                        <span class="percent">75%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 75%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Database Management (SQL)</span>
+                        <span class="percent">80%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 80%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Graphic & Video Design</span>
+                        <span class="percent">78%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 78%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Communication & Leadership</span>
+                        <span class="percent">95%</span>
+                    </div>
+                    <div class="bar"><div class="fill" style="width: 95%"></div></div>
+                </div>
+            </div>
+            <!-- this is skills setion -->
+            
+            <div  class="skills-category_1 tools-category_1">
+                <h3 class="category-title">Tools</h3>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <i class="fas fa-network-wired"></i>
+                        <span>Nmap</span>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-bug"></i>
+                        <span>Burp Suite</span>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-chart-network"></i>
+                        <span>Wireshark</span>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Nessus</span>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-search"></i>
+                        <span>Autopsy</span>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-hdd"></i>
+                        <span>FTK Imager</span>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fab fa-google"></i>
+                        <span>OSINT Framework</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+           
+        </style>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="assets/project/brute.jpg" alt="Brute Force Time Estimator" class="project-img">
+                <div class="project-content">
+                    <h3>Brute Force Time Estimator</h3>
+                    <p>Brute Force Time Estimator calculates how long a password would take to crack using brute force, highlighting the importance of strong, complex passwords.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Security</span>
+                        <span class="tech-tag">Password Analysis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/nameisyash-100/Poornima-projects-BCA-cyber-security-/tree/97019a01a66d92cf922fe6d75b9ca89183db104e/password%20checker" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Source
+                        </a>
+                        <a href="#" class="project-link demo-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/project/socialmedia.jpg" alt="Social Media Analyzer" class="project-img">
+                <div class="project-content">
+                    <h3>Social Media Analyzer</h3>
+                    <p>Social Media Analyzer is a tool that tracks, analyzes, and visualizes social media performance, helping users understand engagement, reach, and trends effectively.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Social Media</span>
+                        <span class="tech-tag">Analytics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link github-link">
+                            <i class="fab fa-github"></i> Coming Soon
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/project/socialmedia.jpg" alt="Keylogger Detector" class="project-img">
+                <div class="project-content">
+                    <h3>Keylogger Detector</h3>
+                    <p>Keylogger Detector is a tool that identifies and alerts users to hidden keylogging software, helping protect sensitive information and ensure device security.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Security</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">System Security</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/nameisyash-100/keylogging" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Source
+                        </a>
+                        <a href="#" class="project-link demo-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="Certifications" class="section">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-slider-container">
+            <button class="slider-btn prev-btn" onclick="moveSlider(-1)">❮</button>
+            <div class="cert-slider">
+                <div class="cert-slide">
+                    <img src="/assets/certifications/Red_Hat_Certified_System_Administrator__RHCSA__Badge20250112-26-6es5z8_page-0001.jpg" alt="RHCSA" class="cert-img" onclick="openModal(this)">
+                    <h3>RHCSA</h3>
+                    <p>Red Hat Certified System Administrator</p>
+                </div>
+                <div class="cert-slide">
+                    <img src="/assets/certifications/Yash Sharma CEH Certificate_page-0001.jpg" alt="CSA Program" class="cert-img" onclick="openModal(this)">
+                    <h3>CEH</h3>
+                    <p>Certified Ethical Hacker</p>
+                </div>
+                <div class="cert-slide">
+                    <img src="/assets/certifications/THM Advent of Cyber 2024_page-0001.jpg " alt="Advent of Cyber 2024" class="cert-img" onclick="openModal(this)">
+                    <h3>Advent of Cyber 2024</h3>
+                    <p>TryHackMe Achievement</p>
+                </div>
+                <div class="cert-slide">
+                    <img src="/assets/certifications/NSDL Certificate Reliance CS Assosciation_page-0001.jpg" alt="ECyber Security Assosciate Certificate" class="cert-img" onclick="openModal(this)">
+                    <h3>Cyber Security Assosciate Certificate </h3>
+                    <p>Skill India</p>
+                </div>
+                <div class="cert-slide">
+                    <img src="/assets/certifications/EHE.png " alt="Ethical Hacking Essential" class="cert-img" onclick="openModal(this)">
+                    <h3>Ethical Hacking Essential</h3>
+                    <p>EC-Council</p>
+                </div>
+                <div class="cert-slide">
+                    <img src="/assets/certifications/ICIP infrastructure.png" alt="Introduction to Critical Infrastructure Protection" class="cert-img" onclick="openModal(this)">
+                    <h3>Introduction to Critical Infrastructure Protection</h3>
+                    <p>OPSWAT Academy</p>
+                </div>
+                
+                <div class="cert-slide">
+                    <img src="/assets/certifications/Yash Cisco Cyber_Threat_Management__page-0001.jpg" alt="Cyber Threat Management" class="cert-img" onclick="openModal(this)">
+                    <h3>Cyber Threat Management</h3>
+                    <p>Cisco Networking Academy</p>
+                </div>
+                <div class="cert-slide">
+                    <img src="/assets/certifications/Yash Coursera Foundation of Cybersecurity_page-0001.jpg" alt="Foundation of Cyber Security" class="cert-img" onclick="openModal(this)">
+                    <h3>Foundation of Cyber Security</h3>
+                    <p>Coursera</p>
+                </div>
+                <div class="cert-slide">
+                    <img src="/assets/certifications/Yash EC-Configure Juniper SRX Router'.png" alt="Configure Juniper SRX Router" class="cert-img" onclick="openModal(this)">
+                    <h3>Configure Juniper SRX Router</h3>
+                    <p>EC-Council</p>
+                </div>
+                 <div class="cert-slide">
+                    <img src="/assets/certifications/Yash PRAYOGAM 2024 Keylogger_page-0001.jpg" alt="PRAYOGAM 2K24" class="cert-img" onclick="openModal(this)">
+                    <h3>PRAYOGAM 2K24</h3>
+                    <p>Poornima University</p>
+                </div>
+                <div class="cert-slide">
+                    <img src="/assets/certifications/Yash Sharma Hackiware Certificate.jpg" alt="Source Code Seminar 2K25" class="cert-img" onclick="openModal(this)">
+                    <h3>Source Code Seminar 2K25</h3>
+                    <p>Hackiware</p>
+                </div>
+                <div class="cert-slide">
+                    <img src="/assets/certifications/Yash EC-Cisco LABS Crash Course.jpg" alt="Cisco LABS Crash Course" class="cert-img" onclick="openModal(this)">
+                    <h3>Cisco LABS Crash Course</h3>
+                    <p>EC-Council</p>
+                </div>
+                <div class="cert-slide">
+                    <img src="/assets/certifications/SkillsCert20250903-32-wnf6si_page-0001.jpg" alt="MongoDB Basics" class="cert-img" onclick="openModal(this)">
+                    <h3>MongoDB Basics</h3>
+                    <p>MongoDB Skill</p>
+                </div>
+                <div class="cert-slide">
+                    <img src="/assets/certifications/Yash EC-CS For Business.png" alt="Cyber Security for Business" class="cert-img" onclick="openModal(this)">
+                    <h3>Cyber Security for Business</h3>
+                    <p>EC-Council</p>
+                </div>
+                <div class="cert-slide">
+                    <img src="/assets/certifications/Yash Great-learning Application Security.jpg" alt="Application Security" class="cert-img" onclick="openModal(this)">
+                    <h3>Application Security</h3>
+                    <p>Great Learning </p>
+                </div>
+            </div>
+            <button class="slider-btn next-btn" onclick="moveSlider(1)">❯</button>
+        </div>
+
+        <!-- Modal for certificate preview -->
+        <div id="certModal" class="modal">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img id="modalImg" class="modal-content">
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <!-- <section id="blogs" class="section">
+        <h2 class="section-title">Blogs</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <h3>Understanding SQL Injection</h3>
+                <p>Simple Tests You Can Run</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h3>Keylogger Detection</h3>
+                <p>Building a Basic Detector</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h3>Brute Force Time Estimator</h3>
+                <p>How to Understand Password Strength</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Experience Section -->
+    <section id="Experience" class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item highlight ">
+                <div class="date">June 2025 - July 2025</div>
+                <div class="content">
+                    <h3>Cybersecurity Intern - Amroha Police (APCSIP'25)</h3>
+                    <ul class="experience-list">
+                        <li>Gained hands-on experience in cybercrime investigation, digital forensics, and cybersecurity tools.</li>
+                        <li>Assisted in malware analysis, phishing detection, and tracing cybercriminal activity.</li>
+                        <li>Learned practical cybersecurity techniques used in law enforcement.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item highlight">
+                <div class="date">July 2024 - Feb 2025</div>
+                <div class="content">
+                    <h3>Cyber Security Awareness Program Lead</h3>
+                    <ul class="experience-list">
+                        <li>Led 15 Members to deliver Awareness Workshops and Training Sessions across 60+ Schools in Rajasthan.</li>
+                        <li>Collaborated with HDFC Bank, The Times of India, and Lovely Professional University (LPU).</li>
+                        <li>Successfully trained 10,000+ participants in cybersecurity awareness.</li>
+                        <li>Received appreciations from Western Railway, various Schools and Colleges for conducting Cybersecurity Awareness Seminars.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item highlight">
+                <div class="date">May 2025 - July 2025</div>
+                <div class="content">
+                    <h3>Data Analyst Intern</h3>
+                    <ul class="experience-list">
+                        <li>Gained hands-on experience in data cleaning, transformation, and visualization.</li>
+                        <li>Utilized Excel, SQL, and Power BI to deliver actionable insights.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Testimonials Section -->
+    <section id="Testimonials" class="section">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="test-slider-container">
+            <!-- Removed stray/duplicate slider and button markup above -->
+                <button class="slider-btn prev-btn" onclick="moveTestSlider(-1)">❮</button>
+                <div class="test-slider">
+                    <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/2.jpg" class="test-img" onclick="openModal(this)">     
+                    </div>               
+                    <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/3.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                    <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/4.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                    <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/5.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                    <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/6.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/7.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/8.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/9.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/10.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/11.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/12.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/13.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/14.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/15.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/16.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/17.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/18.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/19.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/20.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/21.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                     <div class="test-slide">
+                        <img src="/assets/Testimonials2/Seminar at Bachpan a play School, Bandikui/22.jpg" class="test-img" onclick="openModal(this)">
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" onclick="moveTestSlider(1)">❯</button>
+        </div>
+
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-container">
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Message" required></textarea>
+                </div>
+                <button type="submit" class="neon-button">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> yash.sharma59734@gmail.com</p>
+                <!--<p><i class="fas fa-envelope-square"></i> 2023bcacsbyash14927@poornima.edu.in</p>-->
+                <p><i class="fas fa-phone"></i> +91 9351959734</p>
+                <p><i class="fas fa-map-marker-alt"></i> Jaipur, India</p>
+                <div class="social-contact">
+                    <a href="www.linkedin.com/in/yash-sharma-a6ba89290" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/nameisyash-100" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.instagram.com/nameisyash100/?hl=en" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Yash Sharma. All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="#" class="neon-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="neon-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="neon-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
