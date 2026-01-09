@@ -216,3 +216,150 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     alert('Thanks! I will get back to you shortly. (Demo form)');
     this.reset();
 });
+// ...existing code...
+document.addEventListener('DOMContentLoaded', function () {
+    // Certificates slider
+    const certSlider = document.querySelector('.cert-slider');
+    const certSlides = document.querySelectorAll('.cert-slide');
+    const slideGap = 20; // same as CSS margin-right
+    let certIndex = 0;
+
+    function getSlideWidth() {
+        if (!certSlides.length) return 0;
+        return certSlides[0].offsetWidth + slideGap;
+    }
+
+    function updateCertSlider(animate = true) {
+        if (!certSlider) return;
+
+        certSlider.style.transition = animate
+            ? 'transform 400ms ease'
+            : 'none';
+
+        const offset = certIndex * getSlideWidth();
+        certSlider.style.transform = `translateX(-${offset}px)`;
+    }
+
+    window.moveSlider = function (delta) {
+        if (!certSlides.length) return;
+
+        certIndex += delta;
+
+        // 🔁 Loop logic
+        if (certIndex >= certSlides.length) {
+            certIndex = 0;
+        } else if (certIndex < 0) {
+            certIndex = certSlides.length - 1;
+        }
+
+        updateCertSlider(true);
+    };
+
+    // ✅ Fix unknown position on page load
+    requestAnimationFrame(() => updateCertSlider(false));
+    // const certSlider = document.querySelector('.cert-slider');
+    // const certSlides = certSlider ? certSlider.querySelectorAll('.cert-slide') : [];
+    // let certIndex = 0;
+
+    // function updateCertSlider() {
+    //     if (!certSlider) return;
+    //     certSlider.style.transition = 'transform 400ms ease';
+    //     certSlider.style.transform = `translateX(-${certIndex * 100}%)`;
+    // }
+
+    // // delta: +1 for next (right arrow), -1 for prev (left arrow)
+    // window.moveSlider = function(delta) {
+    //     if (!certSlides.length) return;
+    //     certIndex = (certIndex + delta + certSlides.length) % certSlides.length;
+    //     updateCertSlider();
+    // };
+
+    // // Testimonials slider
+    const testSlider = document.querySelector('.test-slider');
+const testSlides = document.querySelectorAll('.test-slide');
+const testGap = 20; // must match CSS margin-right
+let testIndex = 0;
+
+function getTestSlideWidth() {
+    if (!testSlides.length) return 0;
+    return testSlides[0].offsetWidth + testGap;
+}
+
+function updateTestSlider(animate = true) {
+    if (!testSlider) return;
+
+    testSlider.style.transition = animate
+        ? 'transform 400ms ease'
+        : 'none';
+
+    const offset = testIndex * getTestSlideWidth();
+    testSlider.style.transform = `translateX(-${offset}px)`;
+}
+
+window.moveTestSlider = function (delta) {
+    if (!testSlides.length) return;
+
+    testIndex += delta;
+
+    // 🔁 Infinite loop
+    if (testIndex >= testSlides.length) {
+        testIndex = 0;
+    } else if (testIndex < 0) {
+        testIndex = testSlides.length - 1;
+    }
+
+    updateTestSlider(true);
+};
+
+// ✅ Fix random position on page load
+requestAnimationFrame(() => updateTestSlider(false));
+
+    // const testSlider = document.querySelector('.test-slider');
+    // const testSlides = testSlider ? testSlider.querySelectorAll('.test-slide') : [];
+    // let testIndex = 0;
+
+    // function updateTestSlider() {
+    //     if (!testSlider) return;
+    //     testSlider.style.transition = 'transform 400ms ease';
+    //     testSlider.style.transform = `translateX(-${testIndex * 100}%)`;
+    // }
+
+    // window.moveTestSlider = function(delta) {
+    //     if (!testSlides.length) return;
+    //     testIndex = (testIndex + delta + testSlides.length) % testSlides.length;
+    //     updateTestSlider();
+    // };
+
+    // // If sliders are visible on load, ensure initial transform is set
+    // // updateCertSlider();
+    // updateTestSlider();
+
+    // Simple modal used for certificate/testimonial image preview
+    const modal = document.getElementById('certModal');
+    const modalImg = document.getElementById('modalImg');
+
+    window.openModal = function(imgEl) {
+        if (!modal || !modalImg || !imgEl) return;
+        modal.style.display = 'block';
+        modalImg.src = imgEl.src;
+    };
+
+    window.closeModal = function() {
+        if (!modal) return;
+        modal.style.display = 'none';
+        modalImg.src = '';
+    };
+
+    // Close modal when clicking outside the image
+    if (modal) {
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) closeModal();
+        });
+    }
+
+    // Optional: support keyboard ESC to close modal
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+    });
+});
+// ...existing code...
