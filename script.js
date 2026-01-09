@@ -1,31 +1,3 @@
-// Hamburger Menu Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-function toggleMenu() {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    document.body.classList.toggle('no-scroll');
-}
-
-hamburger.addEventListener('click', toggleMenu);
-
-// Close menu when clicking a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-    });
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navMenu.contains(e.target) && navMenu.classList.contains('active')) {
-        toggleMenu();
-    }
-});
-
 // Matrix Rain Animation
 const canvas = document.getElementById('matrixCanvas');
 const ctx = canvas.getContext('2d');
@@ -92,9 +64,9 @@ const slideWidth = 320; // Width of slide + gap
 let autoSlideInterval;
 
 function moveSlider(direction) {
-    // Reverse the direction logic for correct UX
     const maxPosition = -(slides.length - 3) * slideWidth;
-    currentPosition -= direction * slideWidth;
+    currentPosition += direction * slideWidth;
+    
     // Loop back to start/end when reaching bounds
     if (currentPosition > 0) {
         currentPosition = maxPosition;
@@ -102,6 +74,7 @@ function moveSlider(direction) {
     if (currentPosition < maxPosition) {
         currentPosition = 0;
     }
+    
     slider.style.transform = `translateX(${currentPosition}px)`;
 }
 
@@ -133,9 +106,8 @@ const testSlideWidth = 670; // Match the testimonial image width
 let testAutoSlideInterval;
 
 function moveTestSlider(direction) {
-    // Reverse the direction logic for correct UX
     const maxPosition = -(testSlides.length - 1) * testSlideWidth;
-    testCurrentPosition -= direction * testSlideWidth;
+    testCurrentPosition += direction * testSlideWidth;
     // Loop back to start/end when reaching bounds
     if (testCurrentPosition > 0) {
         testCurrentPosition = maxPosition;
