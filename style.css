@@ -72,12 +72,12 @@
 
 /* Base Styles */
 :root {
-  --primary-color: #00ff9d;
---secondary-color: #ff00ff;
---background-color: #000000;
---text-color: #e0e0e0;
---card-bg: rgba(16, 16, 16, 0.95);
---neon-shadow: 0 0 10px var(--primary-color)
+    --primary-color: #00ff9d;
+    --secondary-color: #ff00ff;
+    --background-color: #0a0a0a;
+    --text-color: #e0e0e0;
+    --card-bg: rgba(16, 16, 16, 0.95);
+    --neon-shadow: 0 0 10px var(--primary-color);
 }
 
 * {
@@ -91,14 +91,11 @@ html {
 }
 
 body {
+    font-family: 'Share Tech Mono', monospace;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: 'Share Tech Mono', monospace;
     line-height: 1.6;
-}
-
-body.no-scroll {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* Matrix Canvas */
@@ -116,45 +113,24 @@ body.no-scroll {
 header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 1rem 2rem;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 .neon-text {
     color: var(--primary-color);
-    text-shadow: 0 0 10px var(--primary-color);
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px;
-    background-color: var(--primary-color);
-    transition: all 0.3s ease;
-    border-radius: 2px;
-}
-
-.nav-menu {
-    display: flex;
+    animation: cyberpunkGlow 2s infinite;
 }
 
 nav ul {
@@ -164,55 +140,10 @@ nav ul {
 }
 
 nav a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
-    font-family: 'Share Tech Mono', monospace;
-    transition: color 0.3s ease;
-}
-
-@media screen and (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.95);
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        transition: 0.3s;
-        padding-top: 80px;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    nav a {
-        font-size: 1.2rem;
-    }
+    position: relative;
+    padding: 0.5rem 0;
 }
 
 /* Glitch Hover Effect */
@@ -1000,8 +931,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
-        /* flex-direction: column; */
-        display: flex;
+        flex-direction: column;
         padding: 1rem;
     }
 
@@ -1164,158 +1094,58 @@ footer {
 
 /* skills */
 
-#side_margin {
-    margin-left: 20rem;
-}
-
 .tools-category {
     margin-top: 2rem;
-    width: 100%;
+    width: 195%;
+    border: 3px green solid;
 }
 
 .tools-grid {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 20px;
-    padding: 2rem;
-    margin: 0 auto;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
 }
 
 .tool-card {
-    background: rgba(0, 20, 0, 0.9);
-    border: 2px solid #00ff9d;
-    border-radius: 4px;
-    padding: 2rem 1rem;
-    flex: 0 0 160px;
-    min-width: 160px;
+    flex: 0 0 120px;
+    min-width: 120px;
+}
+
+.tool-card {
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid #00ff00;
+    border-radius: 8px;
+    padding: 1rem;
     text-align: center;
     transition: all 0.3s ease;
-    cursor: pointer;
-    position: relative;
-    min-height: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
-    overflow: hidden;
-}
-
-.tool-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #00ff9d, transparent);
-    box-shadow: 0 0 15px #00ff9d;
-}
-
-.tool-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #00ff9d, transparent);
-    box-shadow: 0 0 15px #00ff9d;
+    gap: 0.5rem;
 }
 
 .tool-card i {
-    font-size: 2.5rem;
-    color: #00ff9d;
-    margin-bottom: 1rem;
-    text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+    font-size: 1.5rem;
+    color: #00ff00;
 }
 
 .tool-card span {
     color: #fff;
-    font-size: 1.1rem;
-    font-family: 'Share Tech Mono', monospace;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 0 5px rgba(0, 255, 157, 0.5);
+    font-size: 0.9rem;
 }
 
 .tool-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
-    background: rgba(0, 20, 0, 0.95);
-    border-color: #00ff9d;
-}
-
-/* Responsive styles for tools grid */
-@media (max-width: 1024px) {
-    .tools-grid {
-        gap: 15px;
-        padding: 1.5rem;
-    }
-
-    .tool-card {
-        flex: 0 0 180px;
-        min-height: 140px;
-        padding: 1.5rem 1rem;
-    }
-
-    .tool-card i {
-        font-size: 2.2rem;
-    }
-
-    .tool-card span {
-        font-size: 1rem;
-    }
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    background: rgba(0, 255, 0, 0.2);
 }
 
 @media (max-width: 768px) {
     .tools-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 1rem;
-    }
-
-    .tool-card {
-        flex: none;
-        width: auto;
-        min-width: unset;
-        min-height: 130px;
-        padding: 1.25rem 1rem;
-    }
-
-    .tool-card i {
-        font-size: 2rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .tool-card span {
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 0.75rem;
-    }
-
-    .tool-card {
-        min-height: 110px;
-        padding: 1rem 0.75rem;
-    }
-
-    .tool-card i {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .tool-card span {
-        font-size: 0.85rem;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }
 
@@ -1394,34 +1224,4 @@ footer {
     .slide-content p {
         font-size: 1em;
     }
-}
-
-
-
-
-/* tools css */
-
-.skills-category_1 {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid rgba(0, 255, 157, 0.1);
-    backdrop-filter: blur(10px);
-    width: 199%;
-    margin-bottom: 2rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-
-    .skills-category_1 {
-        width: 100%;
-        padding: 1.5rem;
-       
-    }
-
-  
 }
